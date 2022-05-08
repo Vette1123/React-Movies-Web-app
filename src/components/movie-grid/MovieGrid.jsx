@@ -6,12 +6,12 @@ import "./movie-grid.scss";
 import MovieCard from "../movie-card/MovieCard";
 import Button, { OutlineButton } from "../button/Button";
 import Input from "../input/Input";
-
+import Spinner from "../spinner/Spinner";
 import tmdbApi, { category, movieType, tvType } from "../../api/tmdbApi";
 
 const MovieGrid = (props) => {
   const [items, setItems] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
 
@@ -41,6 +41,7 @@ const MovieGrid = (props) => {
       setTotalPage(response.total_pages);
     };
     getList();
+    setLoading(false);
   }, [props.category, keyword]);
 
   const loadMore = async () => {
@@ -68,7 +69,9 @@ const MovieGrid = (props) => {
     setItems([...items, ...response.results]);
     setPage(page + 1);
   };
-
+  if (loading) {
+    return <Spinner />;
+  }
   return (
     <>
       <div className="section mb-3">
