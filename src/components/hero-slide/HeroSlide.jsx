@@ -42,7 +42,7 @@ const HeroSlide = () => {
         slidesPerView={1}
         // autoplay={{delay: 3000}}
       >
-        {movieItems.map((item, i) => (
+        {movieItems?.map((item, i) => (
           <SwiperSlide key={i}>
             {({ isActive }) => (
               <HeroSlideItem
@@ -53,7 +53,7 @@ const HeroSlide = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      {movieItems.map((item, i) => (
+      {movieItems?.map((item, i) => (
         <TrailerModal key={i} item={item} />
       ))}
     </div>
