@@ -43,5 +43,9 @@ REACT_APP_API_KEY=your_tmdb_api_key
 
 Get a key from [themoviedb.org](https://www.themoviedb.org/settings/api).
 
+## Related
+
+The same catalogue idea, rebuilt with its own backend: [Full-Stack Movie App](https://www.mohamedgado.com/projects/full-stack-spring-boot-movie-app), a Spring Boot REST API with a TypeScript React client.
+
 ## 🙌 Credits
 Built by [Mohamed Gado](https://mohamedgado.com).
