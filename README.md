@@ -1,6 +1,6 @@
 # 🎬 React Movies Web App
 
-> Browse movies and TV shows from The Movie DB — React + Sass.
+> Browse movies and TV shows from The Movie DB, built with React and Sass.
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
@@ -9,7 +9,7 @@
 
 ### 🚀 [Try it live →](https://sadgemovies.vercel.app)
 
-A movie discovery app built on the TMDB API — browse trending titles, search the catalog, and dive into trailers, cast, and similar picks.
+A movie discovery app built on the TMDB API. You can browse trending titles, search the catalog, and open trailers, cast and similar picks.
 
 ## ✨ Features
 - Hero slideshow of popular movies (Swiper)
