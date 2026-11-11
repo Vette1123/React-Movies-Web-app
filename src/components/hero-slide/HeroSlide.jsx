@@ -9,7 +9,7 @@ import Modal, { ModalContent } from "../modal/Modal";
 import tmdbApi, { category, movieType } from "../../api/tmdbApi";
 import apiConfig from "../../api/apiConfig";
 import "./hero-slide.scss";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
 
 const HeroSlide = () => {

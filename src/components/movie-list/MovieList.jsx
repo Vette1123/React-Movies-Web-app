@@ -11,27 +11,28 @@ import MovieCard from "../movie-card/MovieCard";
 
 const MovieList = (props) => {
   const [items, setItems] = useState([]);
+  const { category: listCategory, type, id } = props;
 
   useEffect(() => {
     const getList = async () => {
       let response = null;
       const params = {};
 
-      if (props.type !== "similar") {
-        switch (props.category) {
+      if (type !== "similar") {
+        switch (listCategory) {
           case category.movie:
-            response = await tmdbApi.getMoviesList(props.type, { params });
+            response = await tmdbApi.getMoviesList(type, { params });
             break;
           default:
-            response = await tmdbApi.getTvList(props.type, { params });
+            response = await tmdbApi.getTvList(type, { params });
         }
       } else {
-        response = await tmdbApi.similar(props.category, props.id);
+        response = await tmdbApi.similar(listCategory, id);
       }
       setItems(response.results);
     };
     getList();
-  }, []);
+  }, [listCategory, type, id]);
 
   return (
     <div className="movie-list">
